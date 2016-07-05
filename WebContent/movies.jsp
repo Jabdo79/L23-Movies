@@ -58,8 +58,8 @@ th {
 
 			rs = st.executeQuery("SELECT * FROM moviedb");
 			if (!rs.next()) {
-				String insert = "INSERT INTO moviedb (name, category) VALUES (?, ?)";
-				PreparedStatement addMovie = con.prepareStatement(insert);
+				PreparedStatement addMovie = con
+						.prepareStatement("INSERT INTO moviedb (name, category) VALUES (?, ?)");
 				for (int i = 1; i < 101; i++) {
 					addMovie.setString(1, MovieIO.getMovie(i).getTitle());
 					addMovie.setString(2, MovieIO.getMovie(i).getCategory());
@@ -100,14 +100,15 @@ th {
 			if (request.getParameter("categories") != null)
 				userCat = request.getParameter("categories");
 
-			String query = "";
-			if (userCat == null || userCat.equals("all"))
-				query = "SELECT name, category FROM moviedb";
-			else
-				query = "SELECT name, category FROM moviedb WHERE category ='" + userCat + "'";
-
 			try {
-				rs = st.executeQuery(query);
+				String query = "";
+				if (userCat == null || userCat.equals("all")) 
+					rs = st.executeQuery("SELECT name, category FROM moviedb");
+				else {
+					PreparedStatement chooseCat = con.prepareStatement("SELECT name, category FROM moviedb WHERE category = ?");
+					chooseCat.setString(1, userCat);
+					rs = chooseCat.executeQuery();
+				}
 
 				while (rs.next()) {
 					String name = rs.getString(1);
