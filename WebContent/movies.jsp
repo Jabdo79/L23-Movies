@@ -51,7 +51,7 @@ th {
 			st = con.createStatement();
 			String createDB = "CREATE DATABASE IF NOT EXISTS movies;";
 			String use = "USE movies";
-			String createTbl = "CREATE TABLE IF NOT EXISTS moviedb(ID int(255), Name varchar(50), Category varchar(15));";
+			String createTbl = "CREATE TABLE IF NOT EXISTS moviedb(ID int(255) NOT NULL AUTO_INCREMENT, Name varchar(50) NOT NULL, Category varchar(15) NOT NULL, PRIMARY KEY(ID));";
 			st.execute(createDB);
 			st.execute(use);
 			st.execute(createTbl);
