@@ -20,16 +20,20 @@ th, td {
 }
 
 tr:nth-child(even) {
-	background-color: #eee;
+	background-color: #EEEEEE;
 }
 
 tr:nth-child(odd) {
-	background-color: #fff;
+	background-color: #FFFFFF;
 }
 
 th {
 	background-color: black;
 	color: white;
+}
+
+body {
+	background-image: url("http://s3.amazonaws.com/digitaltrends-uploads-prod/2015/07/Movie-theater-screen.jpg");
 }
 </style>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
