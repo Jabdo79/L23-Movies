@@ -196,7 +196,7 @@ $(document).ready(function(){
 </head>
 <body>
 <h1 align="center">Movies</h1>
-
+<form name="posterform" action="movies.jsp" method="post">
 <ul class="slider1">
 <li><img alt="All Movies" src="images/posters/all.jpg"></li>
 <li><img alt="All Movies" src="images/posters/animated.jpg"></li>
@@ -206,6 +206,7 @@ $(document).ready(function(){
 <li><img alt="All Movies" src="images/posters/musical.jpg"></li>
 <li><img alt="All Movies" src="images/posters/scifi.jpg"></li>
 </ul>
+</form>
 	<%
 		Connection con = null;
 		Statement st = null;
