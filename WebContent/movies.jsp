@@ -199,12 +199,12 @@ $(document).ready(function(){
 <form name="posterform" action="movies.jsp" method="post">
 <ul class="slider1">
 <li><img alt="All Movies" src="images/posters/all.jpg"></li>
-<li><img alt="All Movies" src="images/posters/animated.jpg"></li>
-<li><img alt="All Movies" src="images/posters/comedy.jpg"></li>
-<li><img alt="All Movies" src="images/posters/drama.jpg"></li>
-<li><img alt="All Movies" src="images/posters/horror.jpg"></li>
-<li><img alt="All Movies" src="images/posters/musical.jpg"></li>
-<li><img alt="All Movies" src="images/posters/scifi.jpg"></li>
+<li><img alt="Animated" src="images/posters/animated.jpg"></li>
+<li><img alt="Comedy" src="images/posters/comedy.jpg"></li>
+<li><img alt="Drama" src="images/posters/drama.jpg"></li>
+<li><img alt="Horror" src="images/posters/horror.jpg"></li>
+<li><img alt="Musical" src="images/posters/musical.jpg"></li>
+<li><img alt="Scifi" src="images/posters/scifi.jpg"></li>
 </ul>
 </form>
 	<%
