@@ -1,0 +1,8 @@
+#pulldown {text-align:center;
+ color: rgb(255, 112, 77);
+ font-family: ""Arial";}
+body {background: url("http://s3.amazonaws.com/digitaltrends-uploads-prod/2015/07/Movie-theater-screen.jpg") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;}
