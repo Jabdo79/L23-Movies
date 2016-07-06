@@ -4,17 +4,21 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
+<!-- Lobster Font -->
 <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+<!-- jQuery library (served from Google) -->
+
 <style>
 @import url(http://fonts.googleapis.com/css?family=Roboto:400,500,700,300,100);
 
 h1 {
  font-family: 'Lobster', Georgia, Times, serif;
  font-size: 70px;
+ color: white;
 }
 
 body {
-  background-color: #3e94ec;
+  background-color: #A82A2A;
   font-family: "Roboto", helvetica, arial, sans-serif;
   font-size: 16px;
   font-weight: 400;
@@ -168,20 +172,40 @@ td.text-right {
   text-align: right;
 }
 </style>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<!-- bxSlider Javascript file -->
+<script src="bxslider/jquery.bxslider.min.js"></script>
+<!-- bxSlider CSS file -->
+<link href="bxslider/jquery.bxslider.css" rel="stylesheet" />
+
+<script type="text/javascript">
+$(document).ready(function(){
+	  $('.slider1').bxSlider({
+	    slideWidth: 200,
+	    minSlides: 1,
+	    maxSlides: 4,
+	    slideMargin: 10
+	  });
+	});
+</script>
+
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Movie Database</title>
+
 </head>
 <body>
 <h1 align="center">Movies</h1>
-<div align="center">
-<img alt="All Movies" src="images/posters/all.jpg">
-<img alt="All Movies" src="images/posters/animated.jpg">
-<img alt="All Movies" src="images/posters/comedy.jpg">
-<img alt="All Movies" src="images/posters/drama.jpg">
-<img alt="All Movies" src="images/posters/horror.jpg">
-<img alt="All Movies" src="images/posters/musical.jpg">
-<img alt="All Movies" src="images/posters/scifi.jpg">
-</div>
+
+<ul class="slider1">
+<li><img alt="All Movies" src="images/posters/all.jpg"></li>
+<li><img alt="All Movies" src="images/posters/animated.jpg"></li>
+<li><img alt="All Movies" src="images/posters/comedy.jpg"></li>
+<li><img alt="All Movies" src="images/posters/drama.jpg"></li>
+<li><img alt="All Movies" src="images/posters/horror.jpg"></li>
+<li><img alt="All Movies" src="images/posters/musical.jpg"></li>
+<li><img alt="All Movies" src="images/posters/scifi.jpg"></li>
+</ul>
 	<%
 		Connection con = null;
 		Statement st = null;
